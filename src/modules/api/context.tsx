@@ -31,9 +31,12 @@ export const RekorClientProvider: FunctionComponent<PropsWithChildren<{}>> = ({
 		https://nextjs.org/docs/pages/building-your-application/configuring/environment-variables
 		*/
 		if (baseUrl === undefined && process.env.NEXT_PUBLIC_REKOR_DEFAULT_DOMAIN) {
+			console.log(process.env.NEXT_PUBLIC_REKOR_DEFAULT_DOMAIN)
 			setBaseUrl(process.env.NEXT_PUBLIC_REKOR_DEFAULT_DOMAIN);
 		}
 
+		console.log(process.argv)
+		
 		return {
 			client: new RekorClient({ BASE: baseUrl }),
 			baseUrl,
