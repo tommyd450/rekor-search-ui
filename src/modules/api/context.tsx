@@ -35,8 +35,6 @@ export const RekorClientProvider: FunctionComponent<PropsWithChildren<{}>> = ({
 			setBaseUrl(process.env.NEXT_PUBLIC_REKOR_DEFAULT_DOMAIN);
 		}
 
-		console.log(process.argv)
-		
 		return {
 			client: new RekorClient({ BASE: baseUrl }),
 			baseUrl,
